@@ -6,24 +6,24 @@
 
 let Arsenal = {};
 
-Arsenal.Weapon = () => {
+Arsenal.Weapon = function () {
  this.name = null;
  this.damage += 0;
 
 };
 
 /*Utlimate Weapon 1.*/
-Arsenal.RaveGun = () => {
-  this.name ="Rave Gun";
-  this.minDamage += 0;
-  this.maxDamge += 0;
-  this.damage += 0;
+Arsenal.RaveGun = function () {
+  this.name ='Rave Gun';
+  this.minDamage += 5;
+  this.maxDamge += 500;
+  this.damage += ;
 };
 Arsenal.RaveGun.prototype = new Arsenal.Weapon();
 
 /*Saw Weapon 2.*/
-Arsenal.BuzzSaw = () => {
-  this.name ="Metal Saw";
+Arsenal.BuzzSaw = function () {
+  this.name ='Metal Saw';
   this.minDamage += 0;
   this.maxDamge += 0;
   this.damage += 0;
@@ -31,8 +31,8 @@ Arsenal.BuzzSaw = () => {
 Arsenal.BuzzSaw.prototype = new Arsenal.Weapon();
 
 /*Lava Thrower Weapon 3.*/
-Arsenal.Lava = () => {
-  this.name ="Lava Thrower";
+Arsenal.Lava = function () {
+  this.name ='Lava Thrower';
   this.minDamage += 0;
   this.maxDamge += 0;
   this.damage += 0;
@@ -40,8 +40,8 @@ Arsenal.Lava = () => {
 Arsenal.Lava.prototype = new Arsenal.Weapon();
 
 /*Music Cannon Weapon 4.*/
-Arsenal.EarWorm = () => {
-  this.name ="Music Cannon";
+Arsenal.EarWorm = function () {
+  this.name ='Music Cannon';
   this.minDamage += 0;
   this.maxDamge += 0;
   this.damage += 0;
@@ -49,8 +49,8 @@ Arsenal.EarWorm = () => {
 Arsenal.EarWorm.prototype = new Arsenal.Weapon();
 
 /*Self Imobilizing Foam Weapon 5.*/
-Arsenal.Foam = () => {
-  this.name ="Imobilizing Foam";
+Arsenal.Foam = function () {
+  this.name ='Imobilizing Foam';
   this.minDamage += 0;
   this.maxDamge += 0;
   this.damage += 0;
@@ -58,8 +58,8 @@ Arsenal.Foam = () => {
 Arsenal.Foam.prototype = new Arsenal.Weapon();
 
 /*Robot Halting and Stimulation Response Weapon 6.*/
-Arsenal.Thump = () => {
-  this.name ="RHASR)";
+Arsenal.Thump = function () {
+  this.name ='RHASR';
   this.minDamage += 0;
   this.maxDamge += 0;
   this.damage += 0;
