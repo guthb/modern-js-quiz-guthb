@@ -1,43 +1,8 @@
 body {
   font-family: "Lato", "Helvetica", "sans-serif";
   margin: 0;
-  /*padding: 10px;*/
   font-size: 3em;
 }
-
-field {
-  margin: 20px 0 0 0;
-}
-
-.field__textinput {
-  font-size: 1em;
-  padding: 15px 0;
-  text-align: center;
-  min-width: 500px;
-}
-
-
-
-/*
-  Section styles
- */
-.card {
-  /*display: none;*/
-}
-
-.card__prompt {
-  font-size: 1.1em;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.card__button {
-  font-size: 1.1em;
-  margin: 30px 0 0 0;
-  text-align: center;
-}
-
 
 /*
   Button styles
@@ -45,8 +10,8 @@ field {
 
 .btn {
   text-decoration: none;
-  background-color: white;
-  color: #888;
+  background-color: slategray;
+  color: black;
   border-radius: 5px;
   display: inline-block;
   margin: 10px;
@@ -57,23 +22,3 @@ field {
   min-width: 260px;
 }
 
-.btn--orange {
-  border-color: #FF4136;
-  color: white;
-  background-color: #FF4136;
-}
-
-.btn--blue {
-  border-color: #0074D9;
-  color: white;
-  background-color: #0074D9;
-}
-
-.btn--yellow {
-  border-color: #E4BD00;
-  color: white;
-  background-color: #F3C500;
-}
-
-.btn--big {
-  font-size: 28px;
