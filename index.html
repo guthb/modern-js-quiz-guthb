@@ -1,244 +1,82 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MDJ Robot Battledome Quiz</title>
+    <title>MJD Robot Battledome Quiz</title>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles/quiz.css">
   </head>
-
   <body>
-
-    <article id="game-container">
-      <!-- applcation title -->
-      <section id="robot-setup" class="card card--name">
-        <div class="card__prompt">
-          <h1> MDJ Quiz Robot Battledome</h1>
-          <div>RECORD YOUR NAME, ROBOT</div>
-          <div class="field">
-            <input type="text" autofocus="true" id="robot-name" class="field__textinput">
-          </div>
+    <article id="game_container" class="container">
+      <section id="playerSetup">
+        <div>
+          <h1 id="robotOne">Robot One</h1>
         </div>
-
-        <div class="card__button">
-          <a class="card__link btn btn--big btn--orange"
-             href="#"
-             current="card--name"
-             next="card--robot">
-            <span class="btn__prompt">></span>
-            <span class="btn__text">Select Robot</span>
-          </a>
-        </div>
-      </section>
-      <!-- Robot One -->
-      <section id="class-select" class="card card--robot">
-        <div class="card__prompt">
-          <div>CHOOSE YOUR ROBOT</div>
-          <div>
-            <a class="card__back btn btn--small"
-               href="#"
-               previous="card--name">
-              <span class="btn__prompt">&lt;</span>
-              <span class="btn__text">Back</span>
-            </a>
+        <section id="robotTypeSelect" class="container">
+          <h3>Select your Robot Type</h3>
+          <div id="typeButtons" class="col-sm-12 container">
+            <button id="Drone" class="btn typebtn">Drone</button>
+            <button id="BiPedal" class="btn typebtn">BiPedal</button>
+            <button id="ATV" class="btn typebtn">ATV</button>
           </div>
-        </div>
-
-        <div class="container-fluid">
-          <div class="row">
-              <div class="card__button"><a class="class__link btn btn--big btn--blue" href="#"><span class="btn__prompt">&gt;</span><span class="btn__text">Drone</span></a></div>
-              <div class="card__button"><a class="class__link btn btn--big btn--blue" href="#"><span class="btn__prompt">&gt;</span><span class="btn__text">BiPedal</span></a></div>
-              <div class="card__button"><a class="class__link btn btn--big btn--blue" href="#"><span class="btn__prompt">&gt;</span><span class="btn__text">ATV</span></a></div>
-          </div>
-        </div>
-
-        <div class="card__button">
-          <a class="card__link btn btn--big btn--orange"
-             href="#"
-             current="card--robot"
-             next="card--weapon">
-            <span class="btn__prompt">&gt;</span>
-            <span class="btn__text">Select Weapon</span>
-          </a>
-        </div>
-      </section>
-      <!-- Weapons -->
-      <section id="weapon-select" class="card card--weapon">
-        <div class="card__prompt">
-          <div>Choose Your Weapon</div>
-          <div>
-            <a class="card__back btn btn--small"
-               href="#"
-               previous="card--robot">
-              <span class="btn__prompt">&lt;</span>
-              <span class="btn__text">Back</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="col-sm-12">
-          <div class="card__button rave">
-            <a class="class__Link btn btn-big btn--blue one">
-              <span class="btn__prompt">></span>
-              <span class="btn_text">Rave Gun</span>
-            </a>
-          </div>
-          <div class="card__button saw">
-            <a class="class__Link btn btn-big btn--blue two">
-              <span class="btn__prompt">></span>
-              <span class="btn_text">Metal Saw</span>
-            </a>
-          </div>
-          <div class="card__button lava">
-            <a class="class__Link btn btn-big btn--blue three">
-              <span class="btn__prompt">></span>
-              <span class="btn_text">Lava Thrower</span>
-            </a>
-          </div>
-          <div class="card__button cannon">
-            <a class="class__Link btn btn-big btn--blue four">
-              <span class="btn__prompt">></span>
-              <span class="btn_text">Music Cannon</span>
-            </a>
-          </div>
-          <div class="card__button foam">
-            <a class="class__Link btn btn-big btn--blue five">
-              <span class="btn__prompt">></span>
-              <span class="btn__text">Imobilizing Foam</span>
-            </a>
-          </div>
-          <div class="card__button thump">
-            <a class="class__Link btn btn-big btn--blue six">
-              <span class="btn__prompt">></span>
-              <span class="btn__text">RHASR</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="card__button">
-          <a class="card__link btn btn--big btn--orange"
-             href="#"
-             current="card--weapon"
-             next="card--mods">
-            <span class="btn__prompt">&gt;</span>
-            <span class="btn__text">Select Modifications</span>
-          </a>
-        </div>
-      </section>
-
-     <!-- Modifications -->
-      <section id="mod-select" class="card card--mods">
-        <div class="card__prompt">
-          <div>Choose Your Modifications</div>
-          <div>
-            <a class="card__back btn btn--small"
-               href="#"
-               previous="card--weapon">
-              <span class="btn__prompt">&lt;</span>
-              <span class="btn__text">Back</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="col-sm-12">
-          <div class="card__button emp">
-            <a class="class__Link btn btn-big btn--blue one">
-              <span class="btn__prompt">></span>
-              <span class="btn_text">E.M.P.</span>
-            </a>
-          </div>
-          <div class="card__button gyro">
-            <a class="class__Link btn btn-big btn--blue two">
-              <span class="btn__prompt">></span>
-              <span class="btn_text">Gyroscope</span>
-            </a>
-          </div>
-          <div class="card__button lock">
-            <a class="class__Link btn btn-big btn--blue three">
-              <span class="btn__prompt">></span>
-              <span class="btn_text">Interlock</span>
-            </a>
-          </div>
-          <div class="card__button scan">
-            <a class="class__Link btn btn-big btn--blue four">
-              <span class="btn__prompt">></span>
-              <span class="btn_text">Scanner</span>
-            </a>
-          </div>
-          <div class="card__button cloak">
-            <a class="class__Link btn btn-big btn--blue five">
-              <span class="btn__prompt">></span>
-              <span class="btn__text">Cloaking</span>
-            </a>
-          </div>
-          <div class="card__button h2o">
-            <a class="class__Link btn btn-big btn--blue six">
-              <span class="btn__prompt">></span>
-              <span class="btn__text">Waterproof</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="card__button">
-          <a class="card__link btn btn--big btn--yellow"
-             href="#"
-             current="card--mods"
-             next="card--battleground">
-            <span class="btn__prompt">&gt;</span>
-            <span class="btn__text">Next Robot</span>
-          </a>
-        </div>
-      </section>
-
-      <!-- robot  two -->
-      <section>
-
-      </section>
-
-      <!-- battlefield -->
-      <section id="readyToRumble">
-        <div class="card__button">
-          <a class="class__Link btn btn--big btn--orange" current="card--weapon" next="card--battleground">
-            <span class="btn__prompt"></span>
-            <span class="btn__text">Enter the BattleDome</span>
-          </a>
-        </div>
-      </section>
-
-      <section id="battleground" class="card card--battleground">
-        <div id="atkBtn" class="card__button">
-          <a class="attackButton class__Link btn btn--big btn--orange">
-            <span class="btn__prompt">></span>
-            <span id="attackButton" class="btn_text attack">ATTACK</span>
-          </a>
-        </div>
-        <div class="container" id="battleText">
-          <div class="row">
-            <div class="col-sm-6" id="playerOne">
+        </section> <!-- end of type select -->
+        <section id="robotModelSelect" class="container">
+          <h3>Select Robot Model</h3>
+          <div id="modelButtons"  class="col-sm-12 container">
+            <div id="droneModel">
+              <button id="typhoon" class="btn modelbtn">Typhoon</button>
+              <button id="cyclone" class="btn modelbtn">Cyclone</button>
             </div>
-            <div class="col-sm-6" id="playerTwo">
-            </div>
-        </div>
-      </section>
-        <div class="container">
-         <div class="row">
-            <div class="col-md-4" id="statOne">
-            </div>
-            <div class="col-md-4 col-md-offset-4" id="statTwo">
-            </div>
-        </div>
-      </div>
-    </article>
 
-  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script type="text/javascript" src="dist/bundle.js"></script>
-  <script src="javascripts/quiz.js"></script>
+            <div id="biPedalModel">
+              <button id="atlas" class="btn modelbtn">Atlas</button>
+              <button id="petman" class="btn modelbtn">Petman</button>
+            </div>
 
+            <div id="droneModel">
+              <button id="bigdog" class="btn modelbtn">Bigdog</button>
+              <button id="cheetah" class="btn modelbtn">Cheetah</button>
+            </div>
+          </div>
+        </section> <!-- end of model select -->
+        <section id="robotWeaponSelect" class="container">
+          <h3>Select Robot Weapon</h3>
+          <div id="weaponButtons" class="col-sm-12 container">
+            <button id="foam" class="btn weaponbtn">Imobilizing Foam</button>
+            <button id="lava" class="btn weaponbtn">Lava Thrower</button>
+            <button id="saw" class="btn wweaponbtn">Metal Saw</button>
+            <button id="cannon" class="btn weaponbtn">Music Cannon</button>
+            <button id="rave" class="btn weaponbtn">Rave Gun</button>
+            <button id="thump" class="btn weaponbtn">RHASAR</button>
+          </div>
+        </section> <!-- end of weapon select -->
+        <section id="robotModificationSelect" class="container">
+          <h3>Select Robot Modifications</h3>
+          <div id="modificationButtons" class="col-sm-12 container">
+            <button id="emp" class="btn modifybtn">E.M.P</button>
+            <button id="gyro" class="btn modifybtn">Gyroscope</button>
+            <button id="lock" class="btn modifybtn">Interlock</button>
+            <button id="scan" class="btn modifybtn">Scanner</button>
+            <button id="cloak" class="btn modifybtn">Cloaking</button>
+            <button id="h20" class="btn modifybtn">Waterproof</button>
+          </div>
+        </section> <!-- end of modifications -->
+      </section>  <!-- end of player setup -->
+      <section id="battledome" class="container">
+        <h1>Welcome to the BattleDome</h1>
+        <div id="robotOneCard" class="col-sm-6">
+        </div>
+        <div id="robotTwoCard" class="col-sm-6">
+        </div>
+        <div id="battleInfo" class="col-sm-12">
+        </div>
+        <button id="battleButton" class="btn battledome">ATTACK</button>
+      </section><!-- end of battledome setup -->
+    </article> <!-- end of game setup -->
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="dist/bundle.js"></script>
   </body>
-
 </html>
-
-
